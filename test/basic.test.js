@@ -7,7 +7,7 @@ exports.lab = lab;
 
 lab.experiment("Basic Test", () => {
 
-    lab.test("returns step coverage when there is only one step", () => {
+    lab.test("Should return mock data", () => {
         nock("https://api.github.com")
             .get("/users/octocat")
             .reply(200, {a:"data"});
