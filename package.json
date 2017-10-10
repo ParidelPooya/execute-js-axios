@@ -1,0 +1,44 @@
+{
+  "name": "execute-js-axios",
+  "version": "0.1.0",
+  "description": "A middleware for execute-js to use Axios for HTTP request",
+  "main": "lib/execute-js-axios.min.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --config webpack.dev.js --progress --colors --watch",
+    "test": "lab -e qa -P test -l",
+    "coverage": "lab -e qa -P test -l -r html -o ./coverage/index.html",
+    "eslint": "eslint ./ --config .eslintrc",
+    "test-with-coverage": "lab -r lcov | ./node_modules/.bin/coveralls"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.0.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-es2015": "6.24.1",
+    "code": "^5.1.0",
+    "coveralls": "^3.0.0",
+    "eslint": "3.19.0",
+    "eslint-loader": "1.7.1",
+    "execute-js": "^0.8.0",
+    "lab": "^14.3.1",
+    "nock": "^9.0.22",
+    "pre-commit": "^1.2.2",
+    "webpack": "3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ParidelPooya/execute-js-axios"
+  },
+  "pre-commit": [
+    "eslint",
+    "test"
+  ],
+  "author": "Pooya Paridel",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2"
+  }
+}
